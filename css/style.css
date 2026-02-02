@@ -1,0 +1,133 @@
+body {
+    padding: 0px 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo img {
+    width: 45px;
+}
+
+#nav-burger-toggle {
+  display: none;
+}
+
+/* Бургер */
+.nav__burger {
+  width: 30px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.nav__line {
+  display: block;
+  height: 3px;
+  background: black;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Меню */
+.nav__menu {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: #222;
+  padding: 60px 20px;
+  transition: 0.3s;
+}
+
+.nav__link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+/* Когда бургер нажат */
+#nav-burger-toggle:checked ~ .nav__menu {
+  left: 0;
+}
+
+/* Анимация бургера */
+#nav-burger-toggle:checked + .nav__burger .nav__line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#nav-burger-toggle:checked + .nav__burger .nav__line:nth-child(2) {
+  opacity: 0;
+}
+
+#nav-burger-toggle:checked + .nav__burger .nav__line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.slider {
+    width: 80%;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.slider input  {
+    display: none;
+}
+
+.slider__slides {
+    display: flex;
+    width: 300%;
+    transition: 0.4s;
+}
+
+.slider__slide {
+    width: 100%;
+    height: 150px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    font-size: 24px;
+}
+
+#slider__s1:checked ~ .slider__slides {
+    transform: translateX(0);
+}
+
+
+#slider__s2:checked ~ .slider__slides {
+    transform: translateX(-100%);
+}
+
+
+#slider__s3:checked ~ .slider__slides {
+    transform: translateX(-200%);
+}
+
+.dlider__dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider__dots label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+
+#slider__s1:checked ~ .slider__dots label[for="slider__s1"],
+#slider__s2:checked ~ .slider__dots label[for="slider__s2"],
+#slider__s3:checked ~ .slider__dots label[for="slider__s3"] {
+    background: #333;
+} 
+ 

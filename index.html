@@ -4,15 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <header class="header">
-        <div class="header__logo"></div>
-        <nav class="header__nav"></nav>
+        <div class="header__logo"><img src="img/gamepad.png" alt="Геймпад минималистичный черно-белый"></div>
+        
+        <nav class="nav">
+            <input type="checkbox" id="nav-burger-toggle">
+
+            <label for="nav-burger-toggle" class="nav__burger">
+                <span class="nav__line"></span>
+                <span class="nav__line"></span>
+                <span class="nav__line"></span>
+            </label>
+
+            <div class="nav__menu">
+                <a href="#" class="nav__link">Поиск</a>
+                <a href="#" class="nav__link">Войти</a>
+                <a href="#" class="nav__link">Личный кабинет</a>
+                <a href="#" class="nav__link">Каталог игр</a>
+            </div>
+        </nav>
+
     </header>
-    
+
     <main class="main">
-        <section class="hero"></section>
+        <section class="hero">
+            <h1>Горячие новинки</h1>
+            <div class="slider">
+                <input type="radio" name="slide" id="slider__s1" checked>
+                <input type="radio" name="slide" id="slider__s2" checked>
+                <input type="radio" name="slide" id="slider__s3" checked>
+                <div class="slider__slides">
+                    <div class="slider__slide">DoTA 2</div>
+                    <div class="slider__slide">Valorant</div>
+                    <div class="slider__slide">Persona 3 Reload</div>
+                </div>
+
+                <div class="slider__dots">
+                    <label for="slider__s1"></label>
+                    <label for="slider__s1"></label>
+                    <label for="slider__s1"></label>
+                </div>
+            </div>
+        </section>
         <section class="search"></section>
         <section class="advantages"></section>
         <section class="games"></section>
